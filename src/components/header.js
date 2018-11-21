@@ -1,33 +1,52 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
 
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </div>
-)
+const HeaderStyle = styled.div`
+  ul {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Rock Salt, cursive;
+    text-decoration: none;
+    color: black;
+  }
+  .logo {
+    grid-column: 1 / 4;
+    justify-self: start;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+`;
 
-export default Header
+const Header = () => (
+  <HeaderStyle>
+    <ul>
+      <li className="logo">
+        <Link to="/">Gutter Nasty</Link>
+      </li>
+      <li>
+        <Link to="/music">Music</Link>
+      </li>
+      <li>
+        <Link to="/barbershop">Barbershop</Link>
+      </li>
+      <li>
+        <Link to="/about">About</Link>
+      </li>
+    </ul>
+  </HeaderStyle>
+);
+
+export default Header;
