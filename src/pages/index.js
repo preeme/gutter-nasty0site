@@ -10,17 +10,16 @@ const LinkStyles = styled.div`
   grid-gap: 20px;
   text-align: center;
   a {
-    font-family: Rock Salt, cursive;
     font-size: 16pt;
     text-decoration: none;
     color: black;
+    font-family: Sedgwick Ave;
   }
   a:hover {
     text-decoration: underline;
   }
   h1 {
-    font-family: Rock Salt, cursive;
-    font-size: 24pt;
+    font-family: Rock Salt;
   }
 
   @media only screen and (max-width: 1200px) {

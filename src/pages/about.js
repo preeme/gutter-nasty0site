@@ -12,7 +12,7 @@ const ABOUT_IMAGE = graphql`
   {
     file(relativePath: { regex: "/about-image2/" }) {
       childImageSharp {
-        fixed(width: 650, height: 500) {
+        fixed(width: 400, height: 300) {
           ...GatsbyImageSharpFixed_tracedSVG
         }
       }
@@ -23,22 +23,26 @@ const ABOUT_IMAGE = graphql`
 const AboutStyles = styled.div`
   display: grid;
   grid-gap: 20px;
-  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  padding-right: 20px;
   .about-img {
     justify-self: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    grid-column: 1 /3;
+    padding-left: 20px;
   }
   .info-card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
     padding: 10px;
+    justify-content: center;
+    grid-column: 1/3;
   }
   h1 {
     text-align: center;
-    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: Sedgwick Ave;
   }
   p {
-    text-align: center;
-    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: Sedgwick Ave;
   }
 `
 

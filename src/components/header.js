@@ -22,6 +22,7 @@ const HeaderStyle = styled.div`
     color: black;
   }
   .logo {
+    font-family: Rock Salt;
     grid-column: 1 / 4;
     justify-self: start;
   }
@@ -34,7 +35,7 @@ const Header = () => (
   <HeaderStyle>
     <ul>
       <li className="logo">
-        <Link to="/">Gutter Nasty</Link>
+        <Link to="/">GN</Link>
       </li>
       <li>
         <Link to="/music">Music</Link>
