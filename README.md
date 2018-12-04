@@ -7,4 +7,4 @@
    Built with Gatsby
 </h1>
 
-[Gutter Nasty's website](www.gutternasty.com) built with [Gatsby](https://www.gatsbyjs.org)
+[Gutter Nasty's website](https://www.gutternasty.com) built with [Gatsby](https://www.gatsbyjs.org)
